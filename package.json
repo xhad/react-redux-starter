@@ -7,7 +7,9 @@
     "dev": "NODE_ENV=development webpack-dev-server --hot --inline",
     "build": "NODE_ENV=production webpack",
     "test": "./node_modules/.bin/_mocha",
-    "autotest": "./node_modules/.bin/_mocha --watch"
+    "autotest": "./node_modules/.bin/_mocha --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -29,7 +31,8 @@
     "redux-actions": "^0.9.1",
     "redux-devtools": "^3.1.1",
     "redux-logger": "^2.6.1",
-    "redux-thunk": "^2.0.1"
+    "redux-thunk": "^2.0.1",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "react": "^0.14.8",
@@ -54,5 +57,6 @@
   },
   "engines": {
     "npm": "^3.8.6"
-  }
+  },
+  "snyk": true
 }
